@@ -42,7 +42,9 @@ namespace ATMapplication
                     else 
                     {
                     MessageBox.Show("You have successfully logged in! You are not great but okay.");
-                    var mainMenu = new MainMenu(this);
+                    var customer = user.Customer;
+                    var custAccount = user.Accounts;
+                    var mainMenu = new MainMenu(this, customer, custAccount);
                     mainMenu.Show();
                     Hide();
 

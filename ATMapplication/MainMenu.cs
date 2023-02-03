@@ -13,18 +13,24 @@ namespace ATMapplication
     public partial class MainMenu : Form
     {
         private readonly Login _login;
-        public MainMenu()
-        {
-            InitializeComponent();
-        }
+        public Customer _Customer;
+        public string _CustFirstName;
+        public string _CustLastName;
+        private ICollection<Account> _CustAccount;
 
-        public MainMenu(Login login)
+        public MainMenu(Login login, Customer customer, ICollection<Account> custAccount)
         {
             InitializeComponent();
             _login = login;
+            _Customer = customer;
+            _CustFirstName = customer.FirstName;
+            _CustLastName = customer.LastName;
+            _CustAccount = custAccount;
+            //There is a bug where the last name has many white spaces in the texbox.
+            MainMenuCustNameLB.Text = "Hello " + _CustFirstName + _CustLastName; 
         }
 
-        private void MainOptions_Load(object sender, EventArgs e)
+        private void MainMenu_Load(object sender, EventArgs e)
         {
 
         }

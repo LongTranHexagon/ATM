@@ -162,8 +162,11 @@ CardID
 AccountID
 AccountType
 AccountBalance
-AccountTransaction
 
-Statement:
+Transaction:
+TransactionID
 AccountID
-
+Type
+Amount
+DateTime
+Statement

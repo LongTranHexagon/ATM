@@ -74,6 +74,7 @@
             this.MainMenuBalanceBTN.TabIndex = 14;
             this.MainMenuBalanceBTN.Text = "Balance";
             this.MainMenuBalanceBTN.UseVisualStyleBackColor = true;
+            this.MainMenuBalanceBTN.Click += new System.EventHandler(this.MainMenuBalanceBTN_Click);
             // 
             // MainMenuFastCashBTN
             // 
@@ -154,7 +155,6 @@
             this.MainMenuCustNameLB.Size = new System.Drawing.Size(222, 29);
             this.MainMenuCustNameLB.TabIndex = 22;
             this.MainMenuCustNameLB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
             // 
             // MainMenu
             // 
@@ -176,7 +176,6 @@
             this.Name = "MainMenu";
             this.Text = "Main Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
-            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

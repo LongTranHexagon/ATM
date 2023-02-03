@@ -11,9 +11,8 @@
           </Key>
           <Property Name="AccountID" Type="int" Nullable="false" />
           <Property Name="CardID" Type="int" Nullable="false" />
-          <Property Name="Type" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Balance" Type="int" Nullable="false" />
-          <Property Name="Transactions" Type="nchar" MaxLength="50" />
+          <Property Name="Type" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Balance" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="Cards">
           <Key>
@@ -33,13 +32,16 @@
           <Property Name="LastName" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="PhoneNumber" Type="int" />
         </EntityType>
-        <EntityType Name="Statements">
+        <EntityType Name="Transactions">
           <Key>
-            <PropertyRef Name="StatementID" />
+            <PropertyRef Name="TransactionID" />
           </Key>
-          <Property Name="StatementID" Type="int" Nullable="false" />
+          <Property Name="TransactionID" Type="int" Nullable="false" />
           <Property Name="AccountID" Type="int" Nullable="false" />
-          <Property Name="Statement" Type="varchar(max)" />
+          <Property Name="Type" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Statement" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_Accounts_Cards">
           <End Role="Cards" Type="Self.Cards" Multiplicity="1" />
@@ -55,64 +57,33 @@
         </Association>
         <Association Name="FK_Cards_Customers">
           <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
-          <End Role="Cards" Type="Self.Cards" Multiplicity="0..1" />
+          <End Role="Cards" Type="Self.Cards" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customers">
               <PropertyRef Name="CustomerID" />
             </Principal>
             <Dependent Role="Cards">
-              <PropertyRef Name="CardID" />
+              <PropertyRef Name="CustomerID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Statements_Accounts">
+        <Association Name="FK_Transactions_Accounts">
           <End Role="Accounts" Type="Self.Accounts" Multiplicity="1" />
-          <End Role="Statements" Type="Self.Statements" Multiplicity="*" />
+          <End Role="Transactions" Type="Self.Transactions" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Accounts">
               <PropertyRef Name="AccountID" />
             </Principal>
-            <Dependent Role="Statements">
+            <Dependent Role="Transactions">
               <PropertyRef Name="AccountID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="ATMModelStoreContainer">
           <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cards" EntityType="Self.Cards" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Statements" EntityType="Self.Statements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Accounts_Cards" Association="Self.FK_Accounts_Cards">
             <End Role="Cards" EntitySet="Cards" />
             <End Role="Accounts" EntitySet="Accounts" />
@@ -121,9 +92,9 @@
             <End Role="Customers" EntitySet="Customers" />
             <End Role="Cards" EntitySet="Cards" />
           </AssociationSet>
-          <AssociationSet Name="FK_Statements_Accounts" Association="Self.FK_Statements_Accounts">
+          <AssociationSet Name="FK_Transactions_Accounts" Association="Self.FK_Transactions_Accounts">
             <End Role="Accounts" EntitySet="Accounts" />
-            <End Role="Statements" EntitySet="Statements" />
+            <End Role="Transactions" EntitySet="Transactions" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -161,17 +132,17 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Transactions" EntityType="ATMModel.Transaction" />
           <EntitySet Name="Accounts" EntityType="ATMModel.Account" />
           <EntitySet Name="Cards" EntityType="ATMModel.Card" />
           <EntitySet Name="Customers" EntityType="ATMModel.Customer" />
-          <EntitySet Name="Statements" EntityType="ATMModel.Statement" />
           <AssociationSet Name="FK_Accounts_Cards" Association="ATMModel.FK_Accounts_Cards">
             <End Role="Card" EntitySet="Cards" />
             <End Role="Account" EntitySet="Accounts" />
           </AssociationSet>
-          <AssociationSet Name="FK_Statements_Accounts" Association="ATMModel.FK_Statements_Accounts">
+          <AssociationSet Name="FK_Transactions_Accounts" Association="ATMModel.FK_Transactions_Accounts">
             <End Role="Account" EntitySet="Accounts" />
-            <End Role="Statement" EntitySet="Statements" />
+            <End Role="Transaction" EntitySet="Transactions" />
           </AssociationSet>
           <AssociationSet Name="FK_Cards_Customers" Association="ATMModel.FK_Cards_Customers">
             <End Role="Customer" EntitySet="Customers" />
@@ -189,17 +160,28 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="TransactionID" Type="Int32" Nullable="false" />
+          <Property Name="AccountID" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Statement" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Account" Relationship="ATMModel.FK_Transactions_Accounts" FromRole="Transaction" ToRole="Account" />
+        </EntityType>
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="AccountID" />
           </Key>
           <Property Name="AccountID" Type="Int32" Nullable="false" />
           <Property Name="CardID" Type="Int32" Nullable="false" />
-          <Property Name="Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Balance" Type="Int32" Nullable="false" />
-          <Property Name="Transactions" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Balance" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <NavigationProperty Name="Card" Relationship="ATMModel.FK_Accounts_Cards" FromRole="Account" ToRole="Card" />
-          <NavigationProperty Name="Statements" Relationship="ATMModel.FK_Statements_Accounts" FromRole="Account" ToRole="Statement" />
+          <NavigationProperty Name="Transactions" Relationship="ATMModel.FK_Transactions_Accounts" FromRole="Account" ToRole="Transaction" />
         </EntityType>
         <EntityType Name="Card">
           <Key>
@@ -220,16 +202,7 @@
           <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="PhoneNumber" Type="Int32" />
-          <NavigationProperty Name="Card" Relationship="ATMModel.FK_Cards_Customers" FromRole="Customer" ToRole="Card" />
-        </EntityType>
-        <EntityType Name="Statement">
-          <Key>
-            <PropertyRef Name="StatementID" />
-          </Key>
-          <Property Name="StatementID" Type="Int32" Nullable="false" />
-          <Property Name="AccountID" Type="Int32" Nullable="false" />
-          <Property Name="Statement1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Account" Relationship="ATMModel.FK_Statements_Accounts" FromRole="Statement" ToRole="Account" />
+          <NavigationProperty Name="Cards" Relationship="ATMModel.FK_Cards_Customers" FromRole="Customer" ToRole="Card" />
         </EntityType>
         <Association Name="FK_Accounts_Cards">
           <End Type="ATMModel.Card" Role="Card" Multiplicity="1" />
@@ -243,27 +216,27 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Statements_Accounts">
+        <Association Name="FK_Transactions_Accounts">
           <End Type="ATMModel.Account" Role="Account" Multiplicity="1" />
-          <End Type="ATMModel.Statement" Role="Statement" Multiplicity="*" />
+          <End Type="ATMModel.Transaction" Role="Transaction" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="AccountID" />
             </Principal>
-            <Dependent Role="Statement">
+            <Dependent Role="Transaction">
               <PropertyRef Name="AccountID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Cards_Customers">
           <End Type="ATMModel.Customer" Role="Customer" Multiplicity="1" />
-          <End Type="ATMModel.Card" Role="Card" Multiplicity="0..1" />
+          <End Type="ATMModel.Card" Role="Card" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="CustomerID" />
             </Principal>
             <Dependent Role="Card">
-              <PropertyRef Name="CardID" />
+              <PropertyRef Name="CustomerID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -273,34 +246,21 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ATMModelStoreContainer" CdmEntityContainer="ATMEntities">
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ATMModel.Store.sp_alterdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ATMModel.Store.sp_creatediagram" />
-          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ATMModel.Store.sp_dropdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="ATMModel.Store.sp_helpdiagramdefinition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ATMModel.sp_helpdiagramdefinition_Result">
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="ATMModel.Store.sp_helpdiagrams">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ATMModel.sp_helpdiagrams_Result">
-                <ScalarProperty Name="Database" ColumnName="Database" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Owner" ColumnName="Owner" />
-                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ATMModel.Store.sp_renamediagram" />
-          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ATMModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Transactions">
+            <EntityTypeMapping TypeName="ATMModel.Transaction">
+              <MappingFragment StoreEntitySet="Transactions">
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="ATMModel.Account">
               <MappingFragment StoreEntitySet="Accounts">
-                <ScalarProperty Name="Transactions" ColumnName="Transactions" />
                 <ScalarProperty Name="Balance" ColumnName="Balance" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="CardID" ColumnName="CardID" />
@@ -325,15 +285,6 @@
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Statements">
-            <EntityTypeMapping TypeName="ATMModel.Statement">
-              <MappingFragment StoreEntitySet="Statements">
-                <ScalarProperty Name="Statement1" ColumnName="Statement" />
-                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
-                <ScalarProperty Name="StatementID" ColumnName="StatementID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

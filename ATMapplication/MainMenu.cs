@@ -30,14 +30,16 @@ namespace ATMapplication
             MainMenuCustNameLB.Text = "Hello " + _CustFirstName + _CustLastName; 
         }
 
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             _login.Close();
+        }
+
+        private void MainMenuBalanceBTN_Click(object sender, EventArgs e)
+        { 
+            var accounts = new Accounts();
+            accounts.Show();
+            Hide();
         }
     }
 }

@@ -52,7 +52,6 @@ namespace ATMapplication
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Wrong");
             }
         }

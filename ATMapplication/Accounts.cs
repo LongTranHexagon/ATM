@@ -26,5 +26,19 @@ namespace ATMapplication
         {
 
         }
+
+        private void AccountCheckingBTN_Click(object sender, EventArgs e)
+        {
+            var checkBalance = new CheckBalance();
+            checkBalance.Show();
+            Hide();
+        }
+
+        private void AccountsSavingBTN_Click(object sender, EventArgs e)
+        {
+            var savingBalance = new SavingBalance();
+            savingBalance.Show();
+            Hide();
+        }
     }
 }

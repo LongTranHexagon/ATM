@@ -136,7 +136,7 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Statement.cs">
+    <Compile Include="Transaction.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Accounts.resx">

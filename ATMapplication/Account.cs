@@ -17,17 +17,16 @@ namespace ATMapplication
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Account()
         {
-            this.Statements = new HashSet<Statement>();
+            this.Transactions = new HashSet<Transaction>();
         }
     
         public int AccountID { get; set; }
         public int CardID { get; set; }
         public string Type { get; set; }
-        public int Balance { get; set; }
-        public string Transactions { get; set; }
+        public decimal Balance { get; set; }
     
         public virtual Card Card { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Statement> Statements { get; set; }
+        public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }

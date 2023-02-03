@@ -69,6 +69,7 @@
             this.AccountCheckingBTN.TabIndex = 24;
             this.AccountCheckingBTN.Text = "Checking";
             this.AccountCheckingBTN.UseVisualStyleBackColor = true;
+            this.AccountCheckingBTN.Click += new System.EventHandler(this.AccountCheckingBTN_Click);
             // 
             // AccountsSavingBTN
             // 
@@ -79,6 +80,7 @@
             this.AccountsSavingBTN.TabIndex = 25;
             this.AccountsSavingBTN.Text = "Savings";
             this.AccountsSavingBTN.UseVisualStyleBackColor = true;
+            this.AccountsSavingBTN.Click += new System.EventHandler(this.AccountsSavingBTN_Click);
             // 
             // AccountsOptionLabel
             // 

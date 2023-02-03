@@ -12,11 +12,14 @@ namespace ATMapplication
     using System;
     using System.Collections.Generic;
     
-    public partial class Statement
+    public partial class Transaction
     {
-        public int StatementID { get; set; }
+        public int TransactionID { get; set; }
         public int AccountID { get; set; }
-        public string Statement1 { get; set; }
+        public string Type { get; set; }
+        public decimal Amount { get; set; }
+        public System.DateTime DateTime { get; set; }
+        public string Statement { get; set; }
     
         public virtual Account Account { get; set; }
     }

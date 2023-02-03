@@ -31,5 +31,10 @@ namespace ATMapplication
         {
 
         }
+
+        private void CheckBalanceMenuBTN_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

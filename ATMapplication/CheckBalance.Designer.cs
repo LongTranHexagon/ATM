@@ -36,6 +36,17 @@
             CheckBalanceMenuBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // CheckBalanceMenuBTN
+            // 
+            CheckBalanceMenuBTN.BackColor = System.Drawing.Color.LawnGreen;
+            CheckBalanceMenuBTN.Location = new System.Drawing.Point(407, 367);
+            CheckBalanceMenuBTN.Name = "CheckBalanceMenuBTN";
+            CheckBalanceMenuBTN.Size = new System.Drawing.Size(123, 42);
+            CheckBalanceMenuBTN.TabIndex = 29;
+            CheckBalanceMenuBTN.Text = "Back to Main Menu";
+            CheckBalanceMenuBTN.UseVisualStyleBackColor = false;
+            CheckBalanceMenuBTN.Click += new System.EventHandler(this.CheckBalanceMenuBTN_Click);
+            // 
             // CheckBalanceTitle
             // 
             this.CheckBalanceTitle.AutoSize = true;
@@ -79,16 +90,6 @@
             this.CheckBalanceTextBox.Size = new System.Drawing.Size(155, 20);
             this.CheckBalanceTextBox.TabIndex = 28;
             this.CheckBalanceTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // CheckBalanceMenuBTN
-            // 
-            CheckBalanceMenuBTN.BackColor = System.Drawing.Color.LawnGreen;
-            CheckBalanceMenuBTN.Location = new System.Drawing.Point(407, 367);
-            CheckBalanceMenuBTN.Name = "CheckBalanceMenuBTN";
-            CheckBalanceMenuBTN.Size = new System.Drawing.Size(123, 42);
-            CheckBalanceMenuBTN.TabIndex = 29;
-            CheckBalanceMenuBTN.Text = "Back to Main Menu";
-            CheckBalanceMenuBTN.UseVisualStyleBackColor = false;
             // 
             // CheckBalance
             // 

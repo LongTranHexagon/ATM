@@ -27,10 +27,10 @@ namespace ATMapplication
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Transaction> Transactions { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Card> Cards { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Statement> Statements { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

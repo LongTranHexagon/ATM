@@ -45,7 +45,7 @@ namespace ATMapplication
             }
             else
             {
-                MessageBox.Show("Your Checking Account balance is: $" + checkbalance.Balance);
+                MessageBox.Show(checkbalance.Type + "Account #" + checkbalance.AccountID + "\n" +"Your Checking Account balance is: $" + checkbalance.Balance);
             }
     
         }
@@ -55,11 +55,11 @@ namespace ATMapplication
             var savebalance = atmEntities.Accounts.FirstOrDefault(q => q.Type == "Savings");
             if (savebalance == null)
             {
-                MessageBox.Show("There is no Chekcing Account associated with this card number! ");
+                MessageBox.Show( "There is no Savings Account associated with this card number! ");
             }
             else
             {
-                MessageBox.Show("Your Checking Account balance is: $" + savebalance.Balance);
+                MessageBox.Show(savebalance.Type + "Account #" + savebalance.AccountID + "\n" +"Your Checking Account balance is: $" + savebalance.Balance);
             }
         }
     }

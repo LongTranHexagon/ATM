@@ -16,7 +16,7 @@ namespace ATMapplication
         public Customer _Customer;
         public string _CustFirstName;
         public string _CustLastName;
-        private ICollection<Account> _CustAccount;
+        private Account _CustAccount;
 
         public MainMenu(Login login, Customer customer, ICollection<Account> custAccount)
         {
@@ -25,9 +25,8 @@ namespace ATMapplication
             _Customer = customer;
             _CustFirstName = customer.FirstName;
             _CustLastName = customer.LastName;
-            _CustAccount = custAccount;
             //There is a bug where the last name has many white spaces in the texbox.
-            MainMenuCustNameLB.Text = "Hello " + _CustFirstName + _CustLastName; 
+            MainMenuCustNameLB.Text = "Hello " + _CustFirstName; 
         }
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -36,8 +35,8 @@ namespace ATMapplication
         }
 
         private void MainMenuBalanceBTN_Click(object sender, EventArgs e)
-        { 
-            var accounts = new Accounts();
+        {
+            var accounts = new Accounts(this, _Customer, _CustAccount);
             accounts.Show();
             Hide();
         }

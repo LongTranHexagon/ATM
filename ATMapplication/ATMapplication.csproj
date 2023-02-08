@@ -101,12 +101,6 @@
     <Compile Include="Card.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="CheckBalance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CheckBalance.Designer.cs">
-      <DependentUpon>CheckBalance.cs</DependentUpon>
-    </Compile>
     <Compile Include="Customer.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
     </Compile>
@@ -124,12 +118,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SavingBalance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SavingBalance.Designer.cs">
-      <DependentUpon>SavingBalance.cs</DependentUpon>
-    </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
     </Compile>
@@ -141,9 +129,6 @@
     </Compile>
     <EmbeddedResource Include="Accounts.resx">
       <DependentUpon>Accounts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CheckBalance.resx">
-      <DependentUpon>CheckBalance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -160,9 +145,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SavingBalance.resx">
-      <DependentUpon>SavingBalance.cs</DependentUpon>
-    </EmbeddedResource>
     <EntityDeploy Include="ATMdb.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ATMdb.Designer.cs</LastGenOutput>

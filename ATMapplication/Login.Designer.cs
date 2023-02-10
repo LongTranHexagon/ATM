@@ -34,8 +34,6 @@
             this.RegisterBTN = new System.Windows.Forms.Button();
             this.PINLabel = new System.Windows.Forms.Label();
             this.PINtext = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.Cardtext = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -44,10 +42,10 @@
             this.Title.AutoSize = true;
             this.Title.BackColor = System.Drawing.Color.Transparent;
             this.Title.Font = new System.Drawing.Font("Ink Free", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(464, 200);
-            this.Title.Margin = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.Title.Location = new System.Drawing.Point(151, 42);
+            this.Title.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(1697, 198);
+            this.Title.Size = new System.Drawing.Size(692, 79);
             this.Title.TabIndex = 1;
             this.Title.Text = "Welcome to Long\'s ATM";
             this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -56,10 +54,9 @@
             // 
             this.CardNumberLabel.AutoSize = true;
             this.CardNumberLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CardNumberLabel.Location = new System.Drawing.Point(536, 546);
-            this.CardNumberLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.CardNumberLabel.Location = new System.Drawing.Point(160, 179);
             this.CardNumberLabel.Name = "CardNumberLabel";
-            this.CardNumberLabel.Size = new System.Drawing.Size(673, 67);
+            this.CardNumberLabel.Size = new System.Drawing.Size(265, 27);
             this.CardNumberLabel.TabIndex = 4;
             this.CardNumberLabel.Text = "Select your Card Number:";
             this.CardNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,11 +65,10 @@
             // 
             this.CardNumberSubmitBTN.BackColor = System.Drawing.Color.LawnGreen;
             this.CardNumberSubmitBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CardNumberSubmitBTN.Location = new System.Drawing.Point(1232, 808);
-            this.CardNumberSubmitBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.CardNumberSubmitBTN.Location = new System.Drawing.Point(440, 282);
             this.CardNumberSubmitBTN.Name = "CardNumberSubmitBTN";
             this.CardNumberSubmitBTN.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CardNumberSubmitBTN.Size = new System.Drawing.Size(304, 86);
+            this.CardNumberSubmitBTN.Size = new System.Drawing.Size(114, 36);
             this.CardNumberSubmitBTN.TabIndex = 8;
             this.CardNumberSubmitBTN.Text = "Submit";
             this.CardNumberSubmitBTN.UseVisualStyleBackColor = false;
@@ -82,76 +78,58 @@
             // 
             this.RegisterBTN.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.RegisterBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterBTN.Location = new System.Drawing.Point(1173, 990);
-            this.RegisterBTN.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.RegisterBTN.Location = new System.Drawing.Point(416, 351);
             this.RegisterBTN.Name = "RegisterBTN";
-            this.RegisterBTN.Size = new System.Drawing.Size(432, 110);
+            this.RegisterBTN.Size = new System.Drawing.Size(162, 46);
             this.RegisterBTN.TabIndex = 9;
             this.RegisterBTN.Text = "Register";
             this.RegisterBTN.UseVisualStyleBackColor = false;
+            this.RegisterBTN.Click += new System.EventHandler(this.RegisterBTN_Click);
             // 
             // PINLabel
             // 
             this.PINLabel.AutoSize = true;
             this.PINLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PINLabel.Location = new System.Drawing.Point(1627, 546);
-            this.PINLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.PINLabel.Location = new System.Drawing.Point(582, 179);
             this.PINLabel.Name = "PINLabel";
-            this.PINLabel.Size = new System.Drawing.Size(472, 67);
+            this.PINLabel.Size = new System.Drawing.Size(188, 27);
             this.PINLabel.TabIndex = 10;
             this.PINLabel.Text = "Enter in your PIN:";
             this.PINLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PINtext
             // 
-            this.PINtext.Location = new System.Drawing.Point(1725, 692);
-            this.PINtext.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.PINtext.Location = new System.Drawing.Point(621, 233);
             this.PINtext.Name = "PINtext";
             this.PINtext.PasswordChar = '*';
-            this.PINtext.Size = new System.Drawing.Size(277, 38);
+            this.PINtext.Size = new System.Drawing.Size(106, 20);
             this.PINtext.TabIndex = 11;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(2945, 1660);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(465, 38);
-            this.textBox1.TabIndex = 12;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(2945, 1660);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(465, 38);
-            this.textBox2.TabIndex = 13;
             // 
             // Cardtext
             // 
-            this.Cardtext.Location = new System.Drawing.Point(623, 692);
+            this.Cardtext.Location = new System.Drawing.Point(193, 233);
+            this.Cardtext.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Cardtext.Name = "Cardtext";
             this.Cardtext.PasswordChar = '*';
-            this.Cardtext.Size = new System.Drawing.Size(489, 38);
+            this.Cardtext.Size = new System.Drawing.Size(186, 20);
             this.Cardtext.TabIndex = 14;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(2821, 1366);
+            this.ClientSize = new System.Drawing.Size(959, 521);
             this.Controls.Add(this.Cardtext);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.PINtext);
             this.Controls.Add(this.PINLabel);
             this.Controls.Add(this.RegisterBTN);
             this.Controls.Add(this.CardNumberSubmitBTN);
             this.Controls.Add(this.CardNumberLabel);
             this.Controls.Add(this.Title);
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainTitle";
             this.Load += new System.EventHandler(this.MainTitle_Load);
             this.ResumeLayout(false);
@@ -167,8 +145,6 @@
         private System.Windows.Forms.Button RegisterBTN;
         private System.Windows.Forms.Label PINLabel;
         private System.Windows.Forms.TextBox PINtext;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox Cardtext;
     }
 }

@@ -46,7 +46,7 @@
             this.Title.AutoSize = true;
             this.Title.BackColor = System.Drawing.Color.Transparent;
             this.Title.Font = new System.Drawing.Font("Ink Free", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(177, 20);
+            this.Title.Location = new System.Drawing.Point(151, 42);
             this.Title.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(692, 79);
@@ -85,6 +85,7 @@
             this.MainMenuFastCashBTN.TabIndex = 15;
             this.MainMenuFastCashBTN.Text = "Fast Cash";
             this.MainMenuFastCashBTN.UseVisualStyleBackColor = true;
+            this.MainMenuFastCashBTN.Click += new System.EventHandler(this.MainMenuFastCashBTN_Click);
             // 
             // MainMenuWithdrawBTN
             // 
@@ -174,8 +175,10 @@
             this.Controls.Add(this.MainMenuOptionsLabel);
             this.Controls.Add(this.Title);
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

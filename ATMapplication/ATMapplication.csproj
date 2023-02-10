@@ -104,6 +104,24 @@
     <Compile Include="Customer.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
     </Compile>
+    <Compile Include="FastCashAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastCashAccounts.Designer.cs">
+      <DependentUpon>FastCashAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastCashChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastCashChecking.Designer.cs">
+      <DependentUpon>FastCashChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastCashSavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastCashSavings.Designer.cs">
+      <DependentUpon>FastCashSavings.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +147,15 @@
     </Compile>
     <EmbeddedResource Include="Accounts.resx">
       <DependentUpon>Accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastCashAccounts.resx">
+      <DependentUpon>FastCashAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastCashChecking.resx">
+      <DependentUpon>FastCashChecking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastCashSavings.resx">
+      <DependentUpon>FastCashSavings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

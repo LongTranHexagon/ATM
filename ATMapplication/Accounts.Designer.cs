@@ -33,6 +33,7 @@
             this.AccountCheckingBTN = new System.Windows.Forms.Button();
             this.AccountsSavingBTN = new System.Windows.Forms.Button();
             this.AccountsOptionLabel = new System.Windows.Forms.Label();
+            this.AccountsMenuBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AccountsTitle
@@ -61,7 +62,7 @@
             // AccountCheckingBTN
             // 
             this.AccountCheckingBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountCheckingBTN.Location = new System.Drawing.Point(285, 300);
+            this.AccountCheckingBTN.Location = new System.Drawing.Point(255, 314);
             this.AccountCheckingBTN.Name = "AccountCheckingBTN";
             this.AccountCheckingBTN.Size = new System.Drawing.Size(175, 51);
             this.AccountCheckingBTN.TabIndex = 24;
@@ -72,7 +73,7 @@
             // AccountsSavingBTN
             // 
             this.AccountsSavingBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountsSavingBTN.Location = new System.Drawing.Point(519, 300);
+            this.AccountsSavingBTN.Location = new System.Drawing.Point(519, 314);
             this.AccountsSavingBTN.Name = "AccountsSavingBTN";
             this.AccountsSavingBTN.Size = new System.Drawing.Size(175, 51);
             this.AccountsSavingBTN.TabIndex = 25;
@@ -84,26 +85,41 @@
             // 
             this.AccountsOptionLabel.AutoSize = true;
             this.AccountsOptionLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountsOptionLabel.Location = new System.Drawing.Point(280, 237);
+            this.AccountsOptionLabel.Location = new System.Drawing.Point(191, 242);
             this.AccountsOptionLabel.Name = "AccountsOptionLabel";
             this.AccountsOptionLabel.Size = new System.Drawing.Size(556, 27);
             this.AccountsOptionLabel.TabIndex = 26;
             this.AccountsOptionLabel.Text = "Which Account would you like to check the balance of:";
             this.AccountsOptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // AccountsMenuBTN
+            // 
+            this.AccountsMenuBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountsMenuBTN.Location = new System.Drawing.Point(395, 401);
+            this.AccountsMenuBTN.Name = "AccountsMenuBTN";
+            this.AccountsMenuBTN.Size = new System.Drawing.Size(175, 51);
+            this.AccountsMenuBTN.TabIndex = 42;
+            this.AccountsMenuBTN.Text = "Main Menu";
+            this.AccountsMenuBTN.UseVisualStyleBackColor = true;
+            this.AccountsMenuBTN.Click += new System.EventHandler(this.AccountsMenuBTN_Click);
+            // 
             // Accounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(1033, 555);
+            this.ClientSize = new System.Drawing.Size(959, 521);
+            this.Controls.Add(this.AccountsMenuBTN);
             this.Controls.Add(this.AccountsOptionLabel);
             this.Controls.Add(this.AccountsSavingBTN);
             this.Controls.Add(this.AccountCheckingBTN);
             this.Controls.Add(this.AccountCustomerLabel);
             this.Controls.Add(this.AccountsTitle);
             this.Name = "Accounts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts";
+            this.Load += new System.EventHandler(this.Accounts_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +132,6 @@
         private System.Windows.Forms.Button AccountCheckingBTN;
         private System.Windows.Forms.Button AccountsSavingBTN;
         private System.Windows.Forms.Label AccountsOptionLabel;
+        private System.Windows.Forms.Button AccountsMenuBTN;
     }
 }

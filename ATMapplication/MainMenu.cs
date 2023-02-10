@@ -17,6 +17,7 @@ namespace ATMapplication
         public string _CustFirstName;
         public string _CustLastName;
         private Account _CustAccount;
+        private Accounts accounts;
 
         public MainMenu(Login login, Customer customer, ICollection<Account> custAccount)
         {
@@ -29,6 +30,21 @@ namespace ATMapplication
             MainMenuCustNameLB.Text = "Hello " + _CustFirstName; 
         }
 
+        public MainMenu()
+        {
+
+        }
+
+        public MainMenu(Accounts accounts)
+        {
+            this.accounts = accounts;
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             _login.Close();
@@ -38,6 +54,13 @@ namespace ATMapplication
         {
             var accounts = new Accounts(this, _Customer, _CustAccount);
             accounts.Show();
+            Hide();
+        }
+
+        private void MainMenuFastCashBTN_Click(object sender, EventArgs e)
+        {
+            var fastcashaccounts = new FastCashAccounts(this, _Customer, _CustAccount);
+            fastcashaccounts.Show();
             Hide();
         }
     }

@@ -55,5 +55,10 @@ namespace ATMapplication
                 MessageBox.Show("Wrong");
             }
         }
+
+        private void RegisterBTN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

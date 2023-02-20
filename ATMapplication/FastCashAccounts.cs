@@ -19,7 +19,6 @@ namespace ATMapplication
         private Account custAccount;
         private string _CustFirstName;
         private object _CustAccount;
-        private string MainMenuCustNameLB;
         private readonly ATMEntities atmEntities;
         public FastCashAccounts(MainMenu mainMenu, Customer customer, Account custAccount)
         {

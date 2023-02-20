@@ -64,7 +64,6 @@
             this.RegisterIntroTextBox.Text = "Thank you for your interest in our banking service. To register, please fill out " +
     "the information below.";
             this.RegisterIntroTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.RegisterIntroTextBox.TextChanged += new System.EventHandler(this.RegisterIntroTextBox_TextChanged);
             // 
             // RegisterSubmitBTN
             // 
@@ -92,7 +91,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(164, 20);
             this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // comboBox1
             // 
@@ -106,7 +104,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(136, 28);
             this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // CardNumberLabel
             // 
@@ -129,7 +126,6 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Enter in your Last Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

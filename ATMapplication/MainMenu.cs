@@ -17,7 +17,7 @@ namespace ATMapplication
         public string _CustFirstName;
         public string _CustLastName;
         private Account _CustAccount;
-        private Accounts accounts;
+        private BalanceAccounts accounts;
 
         public MainMenu(Login login, Customer customer, ICollection<Account> custAccount)
         {
@@ -35,7 +35,7 @@ namespace ATMapplication
 
         }
 
-        public MainMenu(Accounts accounts)
+        public MainMenu(BalanceAccounts accounts)
         {
             this.accounts = accounts;
         }
@@ -52,15 +52,15 @@ namespace ATMapplication
 
         private void MainMenuBalanceBTN_Click(object sender, EventArgs e)
         {
-            var accounts = new Accounts(this, _Customer, _CustAccount);
-            accounts.Show();
+            var balanceAccounts = new BalanceAccounts(this, _Customer, _CustAccount);
+            balanceAccounts.Show();
             Hide();
         }
 
         private void MainMenuFastCashBTN_Click(object sender, EventArgs e)
         {
-            var fastcashaccounts = new FastCashAccounts(this, _Customer, _CustAccount);
-            fastcashaccounts.Show();
+            var fastCashAccounts = new FastCashAccounts(this, _Customer, _CustAccount);
+            fastCashAccounts.Show();
             Hide();
         }
     }

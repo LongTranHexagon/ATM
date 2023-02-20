@@ -30,10 +30,8 @@
         {
             this.FashCastAccountTitle = new System.Windows.Forms.Label();
             this.AccountCustomerLabel = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.FastCashCustomerLabel = new System.Windows.Forms.TextBox();
             this.AccountsOptionLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.FastCashOptionLabel = new System.Windows.Forms.Label();
             this.FastCashCheckingBTN = new System.Windows.Forms.Button();
             this.FastCashSavingBTN = new System.Windows.Forms.Button();
@@ -62,16 +60,6 @@
             this.AccountCustomerLabel.TabIndex = 24;
             this.AccountCustomerLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(956, 732);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 29);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // FastCashCustomerLabel
             // 
             this.FastCashCustomerLabel.BackColor = System.Drawing.Color.SkyBlue;
@@ -92,17 +80,6 @@
             this.AccountsOptionLabel.TabIndex = 27;
             this.AccountsOptionLabel.Text = "Which Account would you like to check the balance of:";
             this.AccountsOptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(504, 847);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(556, 27);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Which Account would you like to check the balance of:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FastCashOptionLabel
             // 
@@ -146,10 +123,8 @@
             this.Controls.Add(this.FastCashSavingBTN);
             this.Controls.Add(this.FastCashCheckingBTN);
             this.Controls.Add(this.FastCashOptionLabel);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.AccountsOptionLabel);
             this.Controls.Add(this.FastCashCustomerLabel);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.AccountCustomerLabel);
             this.Controls.Add(this.FashCastAccountTitle);
             this.Margin = new System.Windows.Forms.Padding(1);
@@ -166,10 +141,8 @@
 
         private System.Windows.Forms.Label FashCastAccountTitle;
         private System.Windows.Forms.TextBox AccountCustomerLabel;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox FastCashCustomerLabel;
         private System.Windows.Forms.Label AccountsOptionLabel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label FastCashOptionLabel;
         private System.Windows.Forms.Button FastCashCheckingBTN;
         private System.Windows.Forms.Button FastCashSavingBTN;

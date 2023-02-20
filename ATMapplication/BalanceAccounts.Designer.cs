@@ -1,6 +1,6 @@
 ﻿namespace ATMapplication
 {
-    partial class Accounts
+    partial class BalanceAccounts
     {
         /// <summary>
         /// Required designer variable.

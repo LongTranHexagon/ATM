@@ -50,7 +50,7 @@ namespace ATMapplication
 
         private void FastCashCheck20BTN_Click(object sender, EventArgs e)
         {
-            var fastCashChecking = atmEntities.Accounts.FirstOrDefault(q => q.Type == "Checking");
+/*            var newTransact20 = new Add
             if (fastCashChecking == null)
             {
                 MessageBox.Show("There is no Checking Account associated with this card number! ");
@@ -65,7 +65,7 @@ namespace ATMapplication
                 {
                     MessageBox.Show("Insufficent Funds... ");
                 }
-            }
+            }*/
         }
     }
 }

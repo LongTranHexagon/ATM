@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ATMapplication
 {
-    public partial class Accounts : Form
+    public partial class BalanceAccounts : Form
     {
         public Customer _Customer;
         private Customer customer;
@@ -20,7 +20,7 @@ namespace ATMapplication
         private string _CustFirstName;
         private readonly ATMEntities atmEntities;
 
-        public Accounts(MainMenu mainMenu, Customer customer, Account custAccount)
+        public BalanceAccounts(MainMenu mainMenu, Customer customer, Account custAccount)
         {
             InitializeComponent();
             MainMenu = mainMenu;

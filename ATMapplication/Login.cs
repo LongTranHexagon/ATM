@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -47,7 +48,6 @@ namespace ATMapplication
                     var mainMenu = new MainMenu(this, customer, custAccount);
                     mainMenu.Show();
                     Hide();
-
                     }
             }
             catch (Exception)
@@ -58,7 +58,9 @@ namespace ATMapplication
 
         private void RegisterBTN_Click(object sender, EventArgs e)
         {
-
+            var register = new Register();
+            register.Show();
+            Hide();
         }
     }
 }

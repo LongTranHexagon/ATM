@@ -22,6 +22,7 @@ namespace ATMapplication
         private object customer;
         private object custAccount;
         private BalanceAccounts balanceAccounts;
+        private FastCashSavings fastCashSavings;
 
         public MainMenu(Login login, Customer customer, ICollection<Account> custAccount)
         {
@@ -46,6 +47,14 @@ namespace ATMapplication
         {
             InitializeComponent();
             this.balanceAccounts = balanceAccounts;
+            this.customer = customer;
+            this.custAccount = custAccount;
+        }
+
+        public MainMenu(FastCashSavings fastCashSavings, object customer, object custAccount)
+        {
+            InitializeComponent();
+            this.fastCashSavings = fastCashSavings;
             this.customer = customer;
             this.custAccount = custAccount;
         }

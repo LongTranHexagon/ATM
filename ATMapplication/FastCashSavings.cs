@@ -12,9 +12,49 @@ namespace ATMapplication
 {
     public partial class FastCashSavings : Form
     {
+        private readonly Customer customer;
+        private ICollection<Account> custAccount;
+
         public FastCashSavings()
         {
             InitializeComponent();
+        }
+
+        private void FastCashCheck20BTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FastCashCheck40BTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FastCashCheck60BTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FastCashCheck80BTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FastCashCheck100BTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FastCashCheck200BTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FastCashCheckMenuBTN_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenu(this, customer, custAccount);
+            mainMenu.Show();
+            Hide();
         }
     }
 }

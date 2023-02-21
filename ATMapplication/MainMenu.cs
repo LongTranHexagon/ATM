@@ -18,6 +18,10 @@ namespace ATMapplication
         public string _CustLastName;
         private Account _CustAccount;
         private BalanceAccounts accounts;
+        private FastCashChecking fastCashChecking;
+        private object customer;
+        private object custAccount;
+        private BalanceAccounts balanceAccounts;
 
         public MainMenu(Login login, Customer customer, ICollection<Account> custAccount)
         {
@@ -30,14 +34,20 @@ namespace ATMapplication
             MainMenuCustNameLB.Text = "Hello " + _CustFirstName; 
         }
 
-        public MainMenu()
+        public MainMenu(FastCashChecking fastCashChecking, object customer, object custAccount)
         {
-
+            InitializeComponent();
+            this.fastCashChecking = fastCashChecking;
+            this.customer = customer;
+            this.custAccount = custAccount;
         }
 
-        public MainMenu(BalanceAccounts accounts)
+        public MainMenu(BalanceAccounts balanceAccounts, Customer customer, Account custAccount)
         {
-            this.accounts = accounts;
+            InitializeComponent();
+            this.balanceAccounts = balanceAccounts;
+            this.customer = customer;
+            this.custAccount = custAccount;
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -59,7 +69,7 @@ namespace ATMapplication
 
         private void MainMenuFastCashBTN_Click(object sender, EventArgs e)
         {
-            var fastCashAccounts = new FastCashAccounts(this, _Customer, _CustAccount);
+            var fastCashAccounts = new FastCashAccounts();
             fastCashAccounts.Show();
             Hide();
         }

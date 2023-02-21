@@ -21,7 +21,9 @@ namespace ATMapplication
 
         private void RegisterSubmitBTN_Click(object sender, EventArgs e)
         {
-
+            /*var registerFirstName = new (RegisterEnteredFirstName);
+            var regsiterLastName = new(RegisterEnteredLastName);
+            var registerAccountType = new(RegisterAccountTypeCombo);*/
         }
 
         private void Register_Load(object sender, EventArgs e)

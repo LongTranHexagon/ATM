@@ -101,8 +101,38 @@
     <Compile Include="Card.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
     </Compile>
+    <Compile Include="ChangePhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePhone.Designer.cs">
+      <DependentUpon>ChangePhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePIN.Designer.cs">
+      <DependentUpon>ChangePIN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepositAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositAccounts.Designer.cs">
+      <DependentUpon>DepositAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepositChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositChecking.Designer.cs">
+      <DependentUpon>DepositChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepositSavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositSavings.Designer.cs">
+      <DependentUpon>DepositSavings.cs</DependentUpon>
     </Compile>
     <Compile Include="FastCashAccounts.cs">
       <SubType>Form</SubType>
@@ -148,8 +178,50 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Statement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statement.Designer.cs">
+      <DependentUpon>Statement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactAccounts.Designer.cs">
+      <DependentUpon>TransactAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactChecking.Designer.cs">
+      <DependentUpon>TransactChecking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction.cs">
       <DependentUpon>ATMdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactSavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactSavings.Designer.cs">
+      <DependentUpon>TransactSavings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawAccounts.Designer.cs">
+      <DependentUpon>WithdrawAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawChecking.Designer.cs">
+      <DependentUpon>WithdrawChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawSavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawSavings.Designer.cs">
+      <DependentUpon>WithdrawSavings.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BalanceAccounts.resx">
       <DependentUpon>BalanceAccounts.cs</DependentUpon>

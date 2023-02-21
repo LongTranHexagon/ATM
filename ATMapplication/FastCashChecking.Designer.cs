@@ -96,6 +96,7 @@
             this.FastCashCheck60BTN.TabIndex = 34;
             this.FastCashCheck60BTN.Text = "$60";
             this.FastCashCheck60BTN.UseVisualStyleBackColor = true;
+            this.FastCashCheck60BTN.Click += new System.EventHandler(this.FastCashCheck60BTN_Click);
             // 
             // FastCashCheck80BTN
             // 
@@ -106,6 +107,7 @@
             this.FastCashCheck80BTN.TabIndex = 35;
             this.FastCashCheck80BTN.Text = "$80";
             this.FastCashCheck80BTN.UseVisualStyleBackColor = true;
+            this.FastCashCheck80BTN.Click += new System.EventHandler(this.FastCashCheck80BTN_Click);
             // 
             // FastCashCheck100BTN
             // 
@@ -116,6 +118,7 @@
             this.FastCashCheck100BTN.TabIndex = 36;
             this.FastCashCheck100BTN.Text = "$100";
             this.FastCashCheck100BTN.UseVisualStyleBackColor = true;
+            this.FastCashCheck100BTN.Click += new System.EventHandler(this.FastCashCheck100BTN_Click);
             // 
             // FastCashCheck200BTN
             // 
@@ -126,6 +129,7 @@
             this.FastCashCheck200BTN.TabIndex = 37;
             this.FastCashCheck200BTN.Text = "$200";
             this.FastCashCheck200BTN.UseVisualStyleBackColor = true;
+            this.FastCashCheck200BTN.Click += new System.EventHandler(this.FastCashCheck200BTN_Click);
             // 
             // FastCashCheck20BTN
             // 
@@ -147,6 +151,7 @@
             this.FastCashCheck40BTN.TabIndex = 39;
             this.FastCashCheck40BTN.Text = "$40";
             this.FastCashCheck40BTN.UseVisualStyleBackColor = true;
+            this.FastCashCheck40BTN.Click += new System.EventHandler(this.FastCashCheck40BTN_Click);
             // 
             // label2
             // 
@@ -167,6 +172,7 @@
             this.FastCashCheckMenuBTN.TabIndex = 41;
             this.FastCashCheckMenuBTN.Text = "Main Menu";
             this.FastCashCheckMenuBTN.UseVisualStyleBackColor = true;
+            this.FastCashCheckMenuBTN.Click += new System.EventHandler(this.FastCashCheckMenuBTN_Click);
             // 
             // FastCashCheckAccountInfoLB
             // 

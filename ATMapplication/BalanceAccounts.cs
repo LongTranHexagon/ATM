@@ -68,8 +68,8 @@ namespace ATMapplication
 
         private void AccountsMenuBTN_Click(object sender, EventArgs e)
         {
-            // Button not working. Shows a Blank Screen
-            var mainMenu = new MainMenu(this);
+           // Button not working. Shows a Blank Screen
+            var mainMenu = new MainMenu(this, customer, custAccount);
             mainMenu.Show();
             Hide();
         }

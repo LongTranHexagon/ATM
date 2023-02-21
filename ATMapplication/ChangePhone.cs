@@ -16,5 +16,10 @@ namespace ATMapplication
         {
             InitializeComponent();
         }
+
+        private void ChangePhone_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

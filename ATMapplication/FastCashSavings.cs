@@ -18,6 +18,8 @@ namespace ATMapplication
         public FastCashSavings()
         {
             InitializeComponent();
+            /*var CustomerFirst = customer.FirstName;
+            FastCashCheckAccountInfoLB.Text = "Hello " + CustomerFirst;*/
         }
 
         private void FastCashCheck20BTN_Click(object sender, EventArgs e)

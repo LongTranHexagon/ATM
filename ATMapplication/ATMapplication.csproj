@@ -226,6 +226,9 @@
     <EmbeddedResource Include="BalanceAccounts.resx">
       <DependentUpon>BalanceAccounts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangePhone.resx">
+      <DependentUpon>ChangePhone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FastCashAccounts.resx">
       <DependentUpon>FastCashAccounts.cs</DependentUpon>
     </EmbeddedResource>

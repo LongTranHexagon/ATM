@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AccountsTitle = new System.Windows.Forms.Label();
+            this.BalanceAccountsTitle = new System.Windows.Forms.Label();
             this.AccountCustomerLabel = new System.Windows.Forms.TextBox();
             this.AccountCheckingBTN = new System.Windows.Forms.Button();
             this.AccountsSavingBTN = new System.Windows.Forms.Button();
@@ -36,18 +36,18 @@
             this.AccountsMenuBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // AccountsTitle
+            // BalanceAccountsTitle
             // 
-            this.AccountsTitle.AutoSize = true;
-            this.AccountsTitle.BackColor = System.Drawing.Color.Transparent;
-            this.AccountsTitle.Font = new System.Drawing.Font("Ink Free", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountsTitle.Location = new System.Drawing.Point(151, 42);
-            this.AccountsTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.AccountsTitle.Name = "AccountsTitle";
-            this.AccountsTitle.Size = new System.Drawing.Size(692, 79);
-            this.AccountsTitle.TabIndex = 3;
-            this.AccountsTitle.Text = "Welcome to Long\'s ATM";
-            this.AccountsTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BalanceAccountsTitle.AutoSize = true;
+            this.BalanceAccountsTitle.BackColor = System.Drawing.Color.Transparent;
+            this.BalanceAccountsTitle.Font = new System.Drawing.Font("Ink Free", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BalanceAccountsTitle.Location = new System.Drawing.Point(151, 42);
+            this.BalanceAccountsTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.BalanceAccountsTitle.Name = "BalanceAccountsTitle";
+            this.BalanceAccountsTitle.Size = new System.Drawing.Size(692, 79);
+            this.BalanceAccountsTitle.TabIndex = 3;
+            this.BalanceAccountsTitle.Text = "Welcome to Long\'s ATM";
+            this.BalanceAccountsTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // AccountCustomerLabel
             // 
@@ -103,7 +103,7 @@
             this.AccountsMenuBTN.UseVisualStyleBackColor = true;
             this.AccountsMenuBTN.Click += new System.EventHandler(this.AccountsMenuBTN_Click);
             // 
-            // Accounts
+            // BalanceAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,8 +115,8 @@
             this.Controls.Add(this.AccountsSavingBTN);
             this.Controls.Add(this.AccountCheckingBTN);
             this.Controls.Add(this.AccountCustomerLabel);
-            this.Controls.Add(this.AccountsTitle);
-            this.Name = "Accounts";
+            this.Controls.Add(this.BalanceAccountsTitle);
+            this.Name = "BalanceAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts";
             this.Load += new System.EventHandler(this.Accounts_Load);
@@ -127,7 +127,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label AccountsTitle;
+        private System.Windows.Forms.Label BalanceAccountsTitle;
         private System.Windows.Forms.TextBox AccountCustomerLabel;
         private System.Windows.Forms.Button AccountCheckingBTN;
         private System.Windows.Forms.Button AccountsSavingBTN;

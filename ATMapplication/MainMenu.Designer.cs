@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Title = new System.Windows.Forms.Label();
+            this.MainMenuTitle = new System.Windows.Forms.Label();
             this.MainMenuOptionsLabel = new System.Windows.Forms.Label();
             this.MainMenuBalanceBTN = new System.Windows.Forms.Button();
             this.MainMenuFastCashBTN = new System.Windows.Forms.Button();
@@ -41,18 +41,18 @@
             this.MainMenuCustNameLB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Title
+            // MainMenuTitle
             // 
-            this.Title.AutoSize = true;
-            this.Title.BackColor = System.Drawing.Color.Transparent;
-            this.Title.Font = new System.Drawing.Font("Ink Free", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(151, 42);
-            this.Title.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(692, 79);
-            this.Title.TabIndex = 2;
-            this.Title.Text = "Welcome to Long\'s ATM";
-            this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.MainMenuTitle.AutoSize = true;
+            this.MainMenuTitle.BackColor = System.Drawing.Color.Transparent;
+            this.MainMenuTitle.Font = new System.Drawing.Font("Ink Free", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuTitle.Location = new System.Drawing.Point(151, 42);
+            this.MainMenuTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.MainMenuTitle.Name = "MainMenuTitle";
+            this.MainMenuTitle.Size = new System.Drawing.Size(692, 79);
+            this.MainMenuTitle.TabIndex = 2;
+            this.MainMenuTitle.Text = "Welcome to Long\'s ATM";
+            this.MainMenuTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MainMenuOptionsLabel
             // 
@@ -179,7 +179,7 @@
             this.Controls.Add(this.MainMenuFastCashBTN);
             this.Controls.Add(this.MainMenuBalanceBTN);
             this.Controls.Add(this.MainMenuOptionsLabel);
-            this.Controls.Add(this.Title);
+            this.Controls.Add(this.MainMenuTitle);
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
@@ -192,7 +192,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.Label MainMenuTitle;
         private System.Windows.Forms.Label MainMenuOptionsLabel;
         private System.Windows.Forms.Button MainMenuBalanceBTN;
         private System.Windows.Forms.Button MainMenuFastCashBTN;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.FashCastAccountTitle = new System.Windows.Forms.Label();
+            this.FastCastAccountTitle = new System.Windows.Forms.Label();
             this.AccountCustomerLabel = new System.Windows.Forms.TextBox();
             this.FastCashCustomerLabel = new System.Windows.Forms.TextBox();
             this.AccountsOptionLabel = new System.Windows.Forms.Label();
@@ -37,18 +37,18 @@
             this.FastCashSavingBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // FashCastAccountTitle
+            // FastCastAccountTitle
             // 
-            this.FashCastAccountTitle.AutoSize = true;
-            this.FashCastAccountTitle.BackColor = System.Drawing.Color.Transparent;
-            this.FashCastAccountTitle.Font = new System.Drawing.Font("Ink Free", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FashCastAccountTitle.Location = new System.Drawing.Point(151, 42);
-            this.FashCastAccountTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.FashCastAccountTitle.Name = "FashCastAccountTitle";
-            this.FashCastAccountTitle.Size = new System.Drawing.Size(692, 79);
-            this.FashCastAccountTitle.TabIndex = 2;
-            this.FashCastAccountTitle.Text = "Welcome to Long\'s ATM";
-            this.FashCastAccountTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.FastCastAccountTitle.AutoSize = true;
+            this.FastCastAccountTitle.BackColor = System.Drawing.Color.Transparent;
+            this.FastCastAccountTitle.Font = new System.Drawing.Font("Ink Free", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FastCastAccountTitle.Location = new System.Drawing.Point(151, 42);
+            this.FastCastAccountTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.FastCastAccountTitle.Name = "FastCastAccountTitle";
+            this.FastCastAccountTitle.Size = new System.Drawing.Size(692, 79);
+            this.FastCastAccountTitle.TabIndex = 2;
+            this.FastCastAccountTitle.Text = "Welcome to Long\'s ATM";
+            this.FastCastAccountTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // AccountCustomerLabel
             // 
@@ -126,7 +126,7 @@
             this.Controls.Add(this.AccountsOptionLabel);
             this.Controls.Add(this.FastCashCustomerLabel);
             this.Controls.Add(this.AccountCustomerLabel);
-            this.Controls.Add(this.FashCastAccountTitle);
+            this.Controls.Add(this.FastCastAccountTitle);
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FastCashAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -139,7 +139,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label FashCastAccountTitle;
+        private System.Windows.Forms.Label FastCastAccountTitle;
         private System.Windows.Forms.TextBox AccountCustomerLabel;
         private System.Windows.Forms.TextBox FastCashCustomerLabel;
         private System.Windows.Forms.Label AccountsOptionLabel;

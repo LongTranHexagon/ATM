@@ -82,5 +82,47 @@ namespace ATMapplication
             fastCashAccounts.Show();
             Hide();
         }
+
+        private void MainMenuWithdrawBTN_Click(object sender, EventArgs e)
+        {
+            var withdrawAccounts = new WithdrawAccounts();
+            withdrawAccounts.Show();
+            Hide();
+        }
+
+        private void MainMenuDepositBTN_Click(object sender, EventArgs e)
+        {
+            var depositAccounts = new DepositAccounts();
+            depositAccounts.Show();
+            Hide();
+        }
+
+        private void MainMenu5TransactionsBTN_Click(object sender, EventArgs e)
+        {
+            var transactAccounts = new TransactAccounts();
+            transactAccounts.Show();
+            Hide();
+        }
+
+        private void MainMenuStatementBTN_Click(object sender, EventArgs e)
+        {
+            var statement = new Statement();
+            statement.Show();
+            Hide();
+        }
+
+        private void MainMenuChangePINBTN_Click(object sender, EventArgs e)
+        {
+            var changePIN = new ChangePIN();
+            changePIN.Show();
+            Hide();
+        }
+
+        private void MainMenuChangePhoneBTN_Click(object sender, EventArgs e)
+        {
+            var changePhone = new ChangePhone();
+            changePhone.Show();
+            Hide();
+        }
     }
 }

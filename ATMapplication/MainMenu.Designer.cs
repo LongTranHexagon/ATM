@@ -96,6 +96,7 @@
             this.MainMenuWithdrawBTN.TabIndex = 16;
             this.MainMenuWithdrawBTN.Text = "Withdraw";
             this.MainMenuWithdrawBTN.UseVisualStyleBackColor = true;
+            this.MainMenuWithdrawBTN.Click += new System.EventHandler(this.MainMenuWithdrawBTN_Click);
             // 
             // MainMenuDepositBTN
             // 
@@ -106,6 +107,7 @@
             this.MainMenuDepositBTN.TabIndex = 17;
             this.MainMenuDepositBTN.Text = "Deposit";
             this.MainMenuDepositBTN.UseVisualStyleBackColor = true;
+            this.MainMenuDepositBTN.Click += new System.EventHandler(this.MainMenuDepositBTN_Click);
             // 
             // MainMenu5TransactionsBTN
             // 
@@ -116,6 +118,7 @@
             this.MainMenu5TransactionsBTN.TabIndex = 18;
             this.MainMenu5TransactionsBTN.Text = "Last 5 Transactions";
             this.MainMenu5TransactionsBTN.UseVisualStyleBackColor = true;
+            this.MainMenu5TransactionsBTN.Click += new System.EventHandler(this.MainMenu5TransactionsBTN_Click);
             // 
             // MainMenuStatementBTN
             // 
@@ -126,6 +129,7 @@
             this.MainMenuStatementBTN.TabIndex = 19;
             this.MainMenuStatementBTN.Text = "Bank Statement";
             this.MainMenuStatementBTN.UseVisualStyleBackColor = true;
+            this.MainMenuStatementBTN.Click += new System.EventHandler(this.MainMenuStatementBTN_Click);
             // 
             // MainMenuChangePINBTN
             // 
@@ -136,6 +140,7 @@
             this.MainMenuChangePINBTN.TabIndex = 20;
             this.MainMenuChangePINBTN.Text = "Change PIN";
             this.MainMenuChangePINBTN.UseVisualStyleBackColor = true;
+            this.MainMenuChangePINBTN.Click += new System.EventHandler(this.MainMenuChangePINBTN_Click);
             // 
             // MainMenuChangePhoneBTN
             // 
@@ -146,6 +151,7 @@
             this.MainMenuChangePhoneBTN.TabIndex = 21;
             this.MainMenuChangePhoneBTN.Text = "Change Phone Number";
             this.MainMenuChangePhoneBTN.UseVisualStyleBackColor = true;
+            this.MainMenuChangePhoneBTN.Click += new System.EventHandler(this.MainMenuChangePhoneBTN_Click);
             // 
             // MainMenuCustNameLB
             // 

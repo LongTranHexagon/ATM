@@ -29,9 +29,9 @@ namespace ATMapplication
             InitializeComponent();
             _login = login;
             _Customer = customer;
+            //Bug: Where if you return to the MainMenu and go back to BalanceScreen, it errors on cust's first name.
             _CustFirstName = customer.FirstName;
-            _CustLastName = customer.LastName;
-            //There is a bug where the last name has many white spaces in the texbox.
+            //BUG: first name has many white spaces in the texbox.
             MainMenuCustNameLB.Text = "Hello " + _CustFirstName; 
         }
 

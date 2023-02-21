@@ -18,6 +18,7 @@ namespace ATMapplication
         public FastCashChecking()
         {
             InitializeComponent();
+           // var accountNameAndNumber = FastCashCheckAccountInfoLB(Accounttype + AccountNumber)
         }
 
         private void FastCashChecking_Load(object sender, EventArgs e)

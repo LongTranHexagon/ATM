@@ -19,29 +19,30 @@ namespace ATMapplication
         private Account custAccount;
         private string _CustFirstName;
         private object _CustAccount;
+        private object fastCashChecking;
+        private object account;
         private readonly ATMEntities atmEntities;
-        public FastCashAccounts(/*MainMenu mainMenu, Customer customer, Account custAccount*/)
+        public FastCashAccounts(MainMenu mainMenu, Customer customer, Account custAccount)
         {
             InitializeComponent();
-/*          MainMenu = mainMenu;
+            MainMenu = mainMenu;
             this.customer = customer;
             this.custAccount = custAccount;
             _CustFirstName = customer.FirstName;
-            atmEntities = new ATMEntities();*/
+            FastCashCustomerLabel.Text = "Hello " + _CustFirstName;
+
         }
 
         private void FastCash_Load(object sender, EventArgs e)
         {
-            //Bug: Does not pull up customer's name
-            AccountCustomerLabel.Text = "Hello " + _CustFirstName;
+
         }
 
         private void FastCashCheckingBTN_Click(object sender, EventArgs e)
         {
-            var FastCashChecking = new FastCashChecking();
+            var FastCashChecking = new FastCashChecking(this, customer, account);
             FastCashChecking.Show();
             Hide();
-            
         }
 
         private void FastCashSavingBTN_Click(object sender, EventArgs e)

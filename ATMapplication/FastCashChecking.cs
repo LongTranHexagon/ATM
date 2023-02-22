@@ -13,11 +13,24 @@ namespace ATMapplication
     public partial class FastCashChecking : Form
     {
         private Customer customer;
-        private readonly ICollection<Account> custAccount;
-
-        public FastCashChecking()
+        private Account custAccount;
+        private string _custFirstName;
+        private string _AccountType;
+        private decimal _AccountBalance;
+        private FastCashAccounts fastCashAccounts;
+        private object account;
+        private readonly ATMEntities atmEntities;
+        public FastCashChecking(FastCashAccounts fastCashAccounts, Customer customer, object account)
         {
             InitializeComponent();
+            this.fastCashAccounts = fastCashAccounts;
+            this.customer = customer;
+            this.account = account;
+   //         _AccountType = custAccount.Type;
+   //         _AccountBalance = custAccount.Balance;
+            _custFirstName = customer.FirstName;
+            FastCashCheckCustNameLB.Text = "Hello " + _custFirstName;
+   //         FastCashCheckAccountInfoLB.Text = _AccountType;
         }
 
         private void FastCashChecking_Load(object sender, EventArgs e)

@@ -78,7 +78,7 @@ namespace ATMapplication
 
         private void MainMenuFastCashBTN_Click(object sender, EventArgs e)
         {
-            var fastCashAccounts = new FastCashAccounts();
+            var fastCashAccounts = new FastCashAccounts(this, _Customer, _CustAccount);
             fastCashAccounts.Show();
             Hide();
         }

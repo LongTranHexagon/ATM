@@ -14,12 +14,14 @@ namespace ATMapplication
     {
         private readonly Customer customer;
         private ICollection<Account> custAccount;
+        private string _custFirstName;
 
-        public FastCashSavings()
+        public FastCashSavings(FastCashAccounts fastCashAccounts, Customer customer, object account)
         {
             InitializeComponent();
-            /*var CustomerFirst = customer.FirstName;
-            FastCashCheckAccountInfoLB.Text = "Hello " + CustomerFirst;*/
+            _custFirstName = customer.FirstName;
+            FastCashSaveCustNameLB.Text = "Hello " + _custFirstName;
+            
         }
 
         private void FastCashCheck20BTN_Click(object sender, EventArgs e)

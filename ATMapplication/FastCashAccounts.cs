@@ -47,7 +47,7 @@ namespace ATMapplication
 
         private void FastCashSavingBTN_Click(object sender, EventArgs e)
         {
-            var fastCashSavings = new FastCashSavings();
+            var fastCashSavings = new FastCashSavings(this, customer, account);
             fastCashSavings.Show();
             Hide();
         }

@@ -34,41 +34,55 @@ namespace ATMapplication
 
         public MainMenu MainMenu { get; }
 
-        private void AccountCheckingBTN_Click(object sender, EventArgs e)
-        {
-            var checkbalance = atmEntities.Accounts.FirstOrDefault(q => q.Type == "Checking");
-            if (checkbalance == null)
-            {
-                MessageBox.Show("There is no Checking Account associated with this card number! ");
-            }
-            else
-            {
-                MessageBox.Show(checkbalance.Type + "Account #" + checkbalance.AccountID + "\n" +"Your Checking Account balance is: $" + checkbalance.Balance);
-            }
-    
-        }
-
-        private void AccountsSavingBTN_Click(object sender, EventArgs e)
-        {
-            var savebalance = atmEntities.Accounts.FirstOrDefault(q => q.Type == "Savings");
-            if (savebalance == null)
-            {
-                MessageBox.Show("There is no Savings Account associated with this card number! ");
-            }
-            else
-            {
-                MessageBox.Show(savebalance.Type + "Account #" + savebalance.AccountID + "\n" +"Your Checking Account balance is: $" + savebalance.Balance);
-            }
-        }
-
         private void Accounts_Load(object sender, EventArgs e)
         {
 
         }
 
+        private void AccountCheckingBTN_Click(object sender, EventArgs e)
+        {
+            try
+            { //Only pulls up the first Checking account information.
+                var checkbalance = atmEntities.Accounts.FirstOrDefault(q => q.Type == "Checking");
+                if (checkbalance == null)
+                {
+                    MessageBox.Show("There is no Checking Account associated with this card number! ");
+                }
+                else
+                {
+                    MessageBox.Show(checkbalance.Type + "Account #" + checkbalance.AccountID + "\n" + "Your Checking Account balance is: $" + checkbalance.Balance);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid Selection. Please try again. ");
+            }
+        }
+
+        private void AccountsSavingBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var savebalance = atmEntities.Accounts.FirstOrDefault(q => q.Type == "Savings");
+                if (savebalance == null)
+                {
+                    MessageBox.Show("There is no Savings Account associated with this card number! ");
+                }
+                else
+                {
+                    MessageBox.Show(savebalance.Type + "Account #" + savebalance.AccountID + "\n" + "Your Savings Account balance is: $" + savebalance.Balance);
+                }
+            }
+
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid Selection. Please try again. ");
+            }
+        }
+
+
         private void AccountsMenuBTN_Click(object sender, EventArgs e)
         {
-           // Button not working. Shows a Blank Screen
             var mainMenu = new MainMenu(this, customer, custAccount);
             mainMenu.Show();
             Hide();

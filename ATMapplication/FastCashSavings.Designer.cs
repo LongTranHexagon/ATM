@@ -180,6 +180,7 @@
             this.Controls.Add(this.FastCashSaveCustNameLB);
             this.Controls.Add(this.FastCashSaveTitle);
             this.Name = "FastCashSavings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FastCashSavings";
             this.ResumeLayout(false);
             this.PerformLayout();

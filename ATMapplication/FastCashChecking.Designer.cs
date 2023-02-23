@@ -204,6 +204,7 @@
             this.Controls.Add(this.FastCashCheckCustNameLB);
             this.Controls.Add(this.FastCashCheckTitle);
             this.Name = "FastCashChecking";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FastCashChecking";
             this.Load += new System.EventHandler(this.FastCashChecking_Load);
             this.ResumeLayout(false);

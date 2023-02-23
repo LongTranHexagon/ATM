@@ -21,6 +21,7 @@ namespace ATMapplication
         private object _CustAccount;
         private object fastCashChecking;
         private object account;
+        private object custaccount;
         private readonly ATMEntities atmEntities;
         public FastCashAccounts(MainMenu mainMenu, Customer customer, Account custAccount)
         {
@@ -29,6 +30,7 @@ namespace ATMapplication
             this.customer = customer;
             this.custAccount = custAccount;
             _CustFirstName = customer.FirstName;
+            atmEntities = new ATMEntities();
             FastCashCustomerLabel.Text = "Hello " + _CustFirstName;
 
         }
@@ -40,16 +42,35 @@ namespace ATMapplication
 
         private void FastCashCheckingBTN_Click(object sender, EventArgs e)
         {
-            var FastCashChecking = new FastCashChecking(this, customer, account);
-            FastCashChecking.Show();
-            Hide();
+            //Only pulls up the first Checking account information.
+            var checkFastCash = atmEntities.Accounts.FirstOrDefault(q => q.Type == "Checking");
+            if (checkFastCash == null)
+            {
+                MessageBox.Show("There is no Checking Account associated with this card number! ");
+            }
+            else
+            {
+                var FastCashChecking = new FastCashChecking(this, customer, custAccount);
+                FastCashChecking.Show();
+                Hide();
+                MessageBox.Show(checkFastCash.Type + "Account #" + checkFastCash.AccountID + "\n" + "Your Checking Account balance is: $" + checkFastCash.Balance);
+            }
         }
 
         private void FastCashSavingBTN_Click(object sender, EventArgs e)
         {
-            var fastCashSavings = new FastCashSavings(this, customer, account);
-            fastCashSavings.Show();
-            Hide();
+            var saveFastCash = atmEntities.Accounts.FirstOrDefault(q => q.Type == "Savings");
+            if (saveFastCash == null)
+            {
+                MessageBox.Show("There is no Savings Account associated with this card number! ");
+            }
+            else
+            {
+                var fastCashSavings = new FastCashSavings(this, customer, account);
+                fastCashSavings.Show();
+                Hide();
+                MessageBox.Show(saveFastCash.Type + "Account #" + saveFastCash.AccountID + "\n" + "Your Savings Account balance is: $" + saveFastCash.Balance);
+            }
         }
     }
 }

@@ -26,11 +26,12 @@ namespace ATMapplication
             this.fastCashAccounts = fastCashAccounts;
             this.customer = customer;
             this.account = account;
-   //         _AccountType = custAccount.Type;
-   //         _AccountBalance = custAccount.Balance;
+            atmEntities = new ATMEntities();
+    //        _AccountType = custAccount.Type;
+     //       _AccountBalance = custAccount.Balance;
             _custFirstName = customer.FirstName;
             FastCashCheckCustNameLB.Text = "Hello " + _custFirstName;
-   //         FastCashCheckAccountInfoLB.Text = _AccountType;
+     //       FastCashCheckAccountInfoLB.Text = _AccountType + "balance: $" + _AccountBalance;
         }
 
         private void FastCashChecking_Load(object sender, EventArgs e)
